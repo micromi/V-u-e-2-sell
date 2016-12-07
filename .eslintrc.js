@@ -25,6 +25,10 @@ module.exports = {
       'vue': 'never'
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    /*****自定义规则 start *****/ 
+    "semi": ["error", "always"], // 语句强制分号结尾
+    'linebreak-style': [0, "unix"] //换行风格
+    /*****自定义规则 end *****/
   }
 }
