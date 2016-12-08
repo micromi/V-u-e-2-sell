@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import 'common/stylus/index.styl'; // webpack 的一个特性，可以在js中依赖css
 import App from './App';
 // 1. 定义（路由）组件
 import goods from './components/goods/goods';
@@ -32,14 +33,7 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   router,
+  el: '#app',
   template: '<App/>',
   components: { App },
-}).$mount('#app');
-
-// 原始
-// new Vue({
-//   el: '#app',
-//   template: '<App/>',
-//   components: { App },
-// });
-
+});
